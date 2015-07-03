@@ -8,7 +8,8 @@ import UIKit
 class MainViewController: UITableViewController {
   
   let items: [Item] = [
-    Item(viewController: RedViewController(), title: "RedViewController", subTitle: "")
+    Item(viewController: RedViewController(), title: "RedViewController", subTitle: ""),
+    Item(viewController: FeedViewController(), title: "FeedViewController", subTitle: "displays a list of feed items")
   ]
 
   override func viewDidLoad() {

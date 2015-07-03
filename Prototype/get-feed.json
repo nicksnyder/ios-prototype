@@ -1,0 +1,42 @@
+{
+    "feedItems": [
+        {
+            "contentId": "1",
+            "sharerId": 1
+        },
+        {
+            "contentId": "2",
+            "sharerId": 3
+        }
+    ],
+    "contents": [
+        {
+            "authorId": 1,
+            "body": "Be happy!",
+            "id": "1",
+            "title": "Awesome article"
+        },
+        {
+            "authorId": 4,
+            "body": "You are sad :(",
+            "id": "2",
+            "title": "Bad article"
+        }
+    ],
+    "people": [
+        {
+            "id": 1,
+            "name": "Nick",
+            "nickName": "dude"
+        },
+        {
+            "id": 3,
+            "name": "Emily",
+            "nickName": null
+        },
+        {
+            "id": 4,
+            "name": "Bob"
+        }
+    ]
+}

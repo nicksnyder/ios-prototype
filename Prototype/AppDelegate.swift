@@ -1,7 +1,4 @@
 //
-//  AppDelegate.swift
-//  Prototype
-//
 //  Created by Nick Snyder on 6/18/15.
 //  Copyright (c) 2015 Example. All rights reserved.
 //
@@ -14,6 +11,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   var window: UIWindow?
   
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    //let foo = NSURLProtocol.registerClass(FixtureProtocol)
+    //let bar = NSURLProtocol.registerClass(FixtureURLProtocol)
+    //let foo2 = NSURLProtocol.registerClass(FixtureProtocol.self)
+    //let bar2 = NSURLProtocol.registerClass(FixtureURLProtocol.self)
     let window = UIWindow(frame: UIScreen.mainScreen().bounds)
     self.window = window
     window.backgroundColor = UIColor.redColor()
