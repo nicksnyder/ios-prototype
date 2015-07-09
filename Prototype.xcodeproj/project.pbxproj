@@ -19,6 +19,7 @@
 		0B4683751B44314500CC446B /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4683741B44314500CC446B /* Collection.swift */; };
 		0B4683771B44AA8500CC446B /* CollectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4683761B44AA8500CC446B /* CollectionManager.swift */; };
 		0B4683791B4584A700CC446B /* ModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4683781B4584A700CC446B /* ModelType.swift */; };
+		0BB173BA1B4CBBE900DE29D7 /* feed2.json in Resources */ = {isa = PBXBuildFile; fileRef = 0BB173B91B4CBBE900DE29D7 /* feed2.json */; };
 		0BCBD7061B32FFB00078C44E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCBD7051B32FFB00078C44E /* AppDelegate.swift */; };
 		0BCBD70F1B32FFB00078C44E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BCBD70E1B32FFB00078C44E /* Images.xcassets */; };
 		0BCBD71E1B32FFB00078C44E /* PrototypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCBD71D1B32FFB00078C44E /* PrototypeTests.swift */; };
@@ -28,7 +29,7 @@
 		0BDA73901B3FC81500160009 /* FixtureProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BDA73891B3FC81500160009 /* FixtureProtocol.m */; };
 		0BDA73911B3FC81500160009 /* FixtureProtocolEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BDA738B1B3FC81500160009 /* FixtureProtocolEntry.m */; };
 		0BDA73921B3FC81500160009 /* FixtureScope.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BDA738E1B3FC81500160009 /* FixtureScope.m */; };
-		0BDA73941B3FCBFF00160009 /* get-feed.json in Resources */ = {isa = PBXBuildFile; fileRef = 0BDA73931B3FCBFF00160009 /* get-feed.json */; };
+		0BDA73941B3FCBFF00160009 /* feed1.json in Resources */ = {isa = PBXBuildFile; fileRef = 0BDA73931B3FCBFF00160009 /* feed1.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		0B4683741B44314500CC446B /* Collection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
 		0B4683761B44AA8500CC446B /* CollectionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionManager.swift; sourceTree = "<group>"; };
 		0B4683781B4584A700CC446B /* ModelType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelType.swift; sourceTree = "<group>"; };
+		0BB173B91B4CBBE900DE29D7 /* feed2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = feed2.json; sourceTree = "<group>"; };
 		0BCBD7001B32FFB00078C44E /* Prototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Prototype.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BCBD7041B32FFB00078C44E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0BCBD7051B32FFB00078C44E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -73,7 +75,7 @@
 		0BDA738D1B3FC81500160009 /* FixtureScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FixtureScope.h; sourceTree = "<group>"; };
 		0BDA738E1B3FC81500160009 /* FixtureScope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FixtureScope.m; sourceTree = "<group>"; };
 		0BDA738F1B3FC81500160009 /* FixtureTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FixtureTypes.h; sourceTree = "<group>"; };
-		0BDA73931B3FCBFF00160009 /* get-feed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "get-feed.json"; sourceTree = "<group>"; };
+		0BDA73931B3FCBFF00160009 /* feed1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = feed1.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,8 +120,9 @@
 				0B2F77E61B35314700B41259 /* FeedItemCell.swift */,
 				0B2F77E41B35313200B41259 /* FeedItemCell.xib */,
 				0B2F77DA1B35171600B41259 /* FeedViewController.swift */,
-				0BDA73931B3FCBFF00160009 /* get-feed.json */,
+				0BDA73931B3FCBFF00160009 /* feed1.json */,
 				0B46836E1B421F8500CC446B /* FeedResponse.swift */,
+				0BB173B91B4CBBE900DE29D7 /* feed2.json */,
 			);
 			name = Feed;
 			sourceTree = "<group>";
@@ -264,7 +267,8 @@
 		0BCBD6F81B32FFB00078C44E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = Example;
 				TargetAttributes = {
 					0BCBD6FF1B32FFB00078C44E = {
@@ -300,7 +304,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0BDA73941B3FCBFF00160009 /* get-feed.json in Resources */,
+				0BB173BA1B4CBBE900DE29D7 /* feed2.json in Resources */,
+				0BDA73941B3FCBFF00160009 /* feed1.json in Resources */,
 				0B2F77E51B35313200B41259 /* FeedItemCell.xib in Resources */,
 				0BCBD70F1B32FFB00078C44E /* Images.xcassets in Resources */,
 			);
@@ -381,6 +386,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -451,6 +457,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Prototype/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Prototype/Prototype-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -465,6 +472,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Prototype/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Prototype/Prototype-Bridging-Header.h";
 			};
@@ -484,6 +492,7 @@
 				);
 				INFOPLIST_FILE = PrototypeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Prototype.app/Prototype";
 			};
@@ -499,6 +508,7 @@
 				);
 				INFOPLIST_FILE = PrototypeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Prototype.app/Prototype";
 			};

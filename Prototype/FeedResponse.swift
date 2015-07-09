@@ -5,45 +5,43 @@
 
 import Foundation
 
-typealias NetworkData = [String: AnyObject]
-
 struct FeedResponse {
   let feedItems: [FeedItem]
-  let contents: [Content]
-  let people: [Person]
+  let contents: [String: Content]
+  let people: [Int: Person]
   
-  init?(data: NetworkData?) {
-    let feedItemsData = data?["feedItems"] as? [NetworkData] ?? []
-    self.feedItems = feedItemsData.reduce([FeedItem](), combine: { (var feedItems: [FeedItem], feedItemData: NetworkData) -> [FeedItem] in
+  init?(data: ModelData?) {
+    let feedItemsData = data?["feedItems"] as? [ModelData] ?? []
+    self.feedItems = feedItemsData.reduce([FeedItem](), combine: { (var feedItems: [FeedItem], feedItemData: ModelData) -> [FeedItem] in
       if let feedItem = FeedItem(data: feedItemData) {
         feedItems.append(feedItem)
       }
       return feedItems
     })
     
-    let contentsData = data?["contents"] as? [NetworkData] ?? []
-    self.contents = contentsData.reduce([Content](), combine: { (var contents: [Content], contentData: NetworkData) -> [Content] in
+    let contentsData = data?["contents"] as? [ModelData] ?? []
+    self.contents = contentsData.reduce([String: Content](), combine: { (var contents: [String: Content], contentData: ModelData) -> [String: Content] in
       if let content = Content(data: contentData) {
-        contents.append(content)
+        contents[content.id] = content
       }
       return contents
     })
     
-    let peopleData = data?["people"] as? [NetworkData] ?? []
-    self.people = peopleData.reduce([Person](), combine: { (var people: [Person], personData: NetworkData) -> [Person] in
+    let peopleData = data?["people"] as? [ModelData] ?? []
+    self.people = peopleData.reduce([Int: Person](), combine: { (var people: [Int: Person], personData: ModelData) -> [Int: Person] in
       if let person = Person(data: personData) {
-        people.append(person)
+        people[person.id] = person
       }
       return people
     })
   }
 }
 
-struct FeedItem: NetworkModel {
+struct FeedItem: ModelType {
   let contentId: String
   let sharerId: Int
   
-  init?(data: NetworkData?) {
+  init?(data: ModelData?) {
     if let contentId = data?["contentId"] as? String,
       sharerId = data?["sharerId"] as? Int {
       self.contentId = contentId
@@ -53,7 +51,7 @@ struct FeedItem: NetworkModel {
     }
   }
   
-  func toData() -> NetworkData {
+  func toData() -> ModelData {
     return [
       "contentId": contentId,
       "sharerId": sharerId
@@ -65,13 +63,13 @@ struct FeedItem: NetworkModel {
   }
 }
 
-struct Content: NetworkModel {
+struct Content: ModelType {
   let authorId: Int
   let body: String
   let id: String
   let title: String
   
-  init?(data: NetworkData?) {
+  init?(data: ModelData?) {
     if let authorId = data?["authorId"] as? Int,
       body = data?["body"] as? String,
       id = data?["id"] as? String,
@@ -85,7 +83,7 @@ struct Content: NetworkModel {
     }
   }
   
-  func toData() -> NetworkData {
+  func toData() -> ModelData {
     return [
       "authorId": authorId,
       "body": body,
@@ -99,12 +97,12 @@ struct Content: NetworkModel {
   }
 }
 
-struct Person: NetworkModel {
+struct Person: ModelType {
   let id: Int
   let name: String
   let nickName: String?
   
-  init?(data: NetworkData?) {
+  init?(data: ModelData?) {
     if let id = data?["id"] as? Int,
       name = data?["name"] as? String {
         self.name = name
@@ -115,8 +113,8 @@ struct Person: NetworkModel {
     }
   }
   
-  func toData() -> NetworkData {
-    var data: NetworkData = [
+  func toData() -> ModelData {
+    var data: ModelData = [
       "id": id,
       "name": name
     ]

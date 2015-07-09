@@ -10,6 +10,26 @@ struct FeedItemCellModel: ModelType {
   let sharer: Person
   let author: Person
   
+  init?(data: ModelData?) {
+    if let content = Content(data: data?["content"] as? ModelData),
+      sharer = Person(data: data?["person"] as? ModelData),
+      author = Person(data: data?["author"] as? ModelData) {
+        self.content = content
+        self.sharer = sharer
+        self.author = author
+    } else {
+      return nil
+    }
+  }
+  
+  func toData() -> ModelData {
+    return [
+      "content": content.toData(),
+      "sharer": sharer.toData(),
+      "author": author.toData()
+    ]
+  }
+  
   func getModelId() -> String {
     return "content:\(content.id);sharer:\(sharer.id);author:\(author.id)"
   }

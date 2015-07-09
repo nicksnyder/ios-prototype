@@ -6,10 +6,16 @@
 import Foundation
 
 protocol ModelType {
+  init?(data: ModelData?)
   func getModelId() -> String
+  func toData() -> ModelData
 }
 
+typealias ModelData = [String: AnyObject]
+
+/*
 protocol NetworkModel: ModelType {
   init?(data: NetworkData?)
   func toData() -> NetworkData
-}
+}*/
+

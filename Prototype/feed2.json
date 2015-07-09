@@ -1,0 +1,43 @@
+{
+    "feedItems": [
+        {
+            "contentId": "1",
+            "sharerId": 1
+        },
+        {
+            "contentId": "10",
+            "sharerId": 10
+        }
+    ],
+    "contents": [
+        {
+            "authorId": 1,
+            "body": "Be happy!",
+            "id": "1",
+            "title": "Awesome article"
+        },
+        {
+            "authorId": 11,
+            "body": "Best for last",
+            "id": "10",
+            "title": "Pow"
+        }
+    ],
+    "people": [
+        {
+            "id": 1,
+            "name": "Nick",
+            "nickName": "dude"
+        },
+        {
+            "id": 10,
+            "name": "Leslie",
+            "nickName": "Hulk"
+        },
+        {
+            "id": 11,
+            "name": "Chuck",
+            "nickName": "Norris"
+        }
+    ]
+}

@@ -5,6 +5,7 @@
 
 import Foundation
 
+/*
 class CacheDatastore: Datastore {
   
   let cache = NSCache()
@@ -43,4 +44,4 @@ class CacheDatastore: Datastore {
     }
     return value
   }
-}
+}*/

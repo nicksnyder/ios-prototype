@@ -5,12 +5,12 @@
 
 import Foundation
 
-
-protocol Datastore {
-  func putData(data: [String: DatastoreValue?], completion: ((success: Bool) -> Void)?)
-  func getValueForKey(key: String) -> AnyObject?
+struct DatastoreEntry {
+  let key: String
+  let immutableValue: AnyObject
 }
 
-protocol DatastoreValue {
-  func immutableCopy() -> AnyObject // TODO: do generic types correctly
+protocol Datastore {
+  func putData(data: [DatastoreEntry], completion: ((success: Bool) -> Void)?)
+  func getValueForKey(key: String) -> AnyObject?
 }

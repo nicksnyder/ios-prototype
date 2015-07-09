@@ -17,6 +17,81 @@ struct IndexMove {
   let toIndex: Int
 }
 
+struct PersistenceInfo {
+  let id: String
+  let datastore: Datastore
+}
+
+// rubber db
+class Collection {
+  
+  private let persistenceInfo: PersistenceInfo?
+  
+  private var modelIds = [String]()
+  private var retainedModels = [String: ModelType]()
+  
+  //private let queue = dispatch_queue_create("Collection", nil)
+  
+  private(set) var loaded = false
+  
+  var batchSize: Int = 10
+  
+  init(persistenceInfo: PersistenceInfo?) {
+    self.persistenceInfo = persistenceInfo
+  }
+  
+  func modelAtIndex(index: Int) -> ModelType? {
+    let modelId = modelIds[index]
+    if let model = retainedModels[modelId] {
+      return model
+    }
+    if let persistenceInfo = persistenceInfo {
+      let key = datastoreKeyForCollectionId(persistenceInfo.id, modelId: modelId)
+      return persistenceInfo.datastore.getValueForKey(key) as? ModelType
+    }
+    return nil
+  }
+  
+  func appendModels(models: [ModelType]) {
+    for model in models {
+      let modelId = model.getModelId()
+      modelIds.append(modelId)
+      retainedModels[modelId] = model
+    }
+    /*
+    let appendedModelIds = models.map({ (model: ModelType) -> String in
+      return model.getModelId()
+    })*/
+    
+    if let persistenceInfo = persistenceInfo {
+      var data = [DatastoreEntry]()
+      for model in models {
+        let modelId = model.getModelId()
+        let key = datastoreKeyForCollectionId(persistenceInfo.id, modelId: modelId)
+        data.append(DatastoreEntry(key: key, immutableValue: model.toData()))
+      }
+      let key = datastoreKeyForCollectionId(persistenceInfo.id)
+      data.append(DatastoreEntry(key: key, immutableValue: modelIds))
+      persistenceInfo.datastore.putData(data, completion: { (success) -> Void in
+        
+      })
+    }
+  }
+  
+  private func datastoreKeyForCollectionId(collectionId: String) -> String {
+    return "collection:\(collectionId)"
+  }
+  
+  private func datastoreKeyForCollectionId(collectionId: String, modelId: String) -> String {
+    return "\(datastoreKeyForCollectionId(collectionId)):\(modelId)"
+  }
+  
+  var count: Int {
+    return modelIds.count
+  }
+}
+
+/*
 protocol CollectionDelegate: class {
   typealias ElementType: ModelType
   typealias Delegate: CollectionDelegate
@@ -25,6 +100,8 @@ protocol CollectionDelegate: class {
 
 class Collection<ElementType: ModelType, Delegate: CollectionDelegate> {
   
+  private let queue = dispatch_queue_create("Collection", nil)
+
   weak var delegate: Delegate?
   private var modelIds: [String] = []
   
@@ -45,7 +122,7 @@ class Collection<ElementType: ModelType, Delegate: CollectionDelegate> {
   }
   
   func appendObjects(objects: [ElementType]) {
-    let newModelIds = objects.map({ (model: ElementType) -> String in
+    objects.map({ (model: ElementType) -> String in
       model.getModelId()
     })
     
@@ -55,3 +132,4 @@ class Collection<ElementType: ModelType, Delegate: CollectionDelegate> {
     return modelIds.count
   }
 }
+*/
