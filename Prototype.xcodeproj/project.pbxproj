@@ -13,17 +13,22 @@
 		0B2F77E71B35314700B41259 /* FeedItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2F77E61B35314700B41259 /* FeedItemCell.swift */; };
 		0B2F77EC1B35496400B41259 /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2F77EB1B35496400B41259 /* NSObjectExtension.swift */; };
 		0B2F77F01B354B7F00B41259 /* CacheDatastore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2F77EF1B354B7F00B41259 /* CacheDatastore.swift */; };
+		0B38E6321B57F99E00B652E5 /* FixtureURLProtocolObjC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B38E6311B57F99E00B652E5 /* FixtureURLProtocolObjC.m */; };
+		0B38E6341B57FC3B00B652E5 /* SwiftFixtureProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B38E6331B57FC3B00B652E5 /* SwiftFixtureProtocol.swift */; };
 		0B46836F1B421F8500CC446B /* FeedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B46836E1B421F8500CC446B /* FeedResponse.swift */; };
 		0B4683711B42DFAD00CC446B /* FixtureURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4683701B42DFAD00CC446B /* FixtureURLProtocol.swift */; };
 		0B4683731B43828100CC446B /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4683721B43828100CC446B /* NetworkClient.swift */; };
 		0B4683751B44314500CC446B /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4683741B44314500CC446B /* Collection.swift */; };
 		0B4683771B44AA8500CC446B /* CollectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4683761B44AA8500CC446B /* CollectionManager.swift */; };
 		0B4683791B4584A700CC446B /* ModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4683781B4584A700CC446B /* ModelType.swift */; };
+		0B4C0BB21B5092FE003841A7 /* JsonFileDatastore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4C0BB11B5092FE003841A7 /* JsonFileDatastore.swift */; };
+		0B4C0BB41B5095DF003841A7 /* VersionedDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4C0BB31B5095DF003841A7 /* VersionedDictionary.swift */; };
 		0BB173BA1B4CBBE900DE29D7 /* feed2.json in Resources */ = {isa = PBXBuildFile; fileRef = 0BB173B91B4CBBE900DE29D7 /* feed2.json */; };
 		0BCBD7061B32FFB00078C44E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCBD7051B32FFB00078C44E /* AppDelegate.swift */; };
 		0BCBD70F1B32FFB00078C44E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BCBD70E1B32FFB00078C44E /* Images.xcassets */; };
 		0BCBD71E1B32FFB00078C44E /* PrototypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCBD71D1B32FFB00078C44E /* PrototypeTests.swift */; };
 		0BD01B661B339F6400FBF158 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD01B651B339F6400FBF158 /* MainViewController.swift */; };
+		0BD3418E1B4EBF7F006569A0 /* FeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD3418D1B4EBF7F006569A0 /* FeedLoader.swift */; };
 		0BDA73801B3FC23100160009 /* Datastore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDA737F1B3FC23100160009 /* Datastore.swift */; };
 		0BDA73841B3FC3ED00160009 /* MemoryDatastore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDA73831B3FC3ED00160009 /* MemoryDatastore.swift */; };
 		0BDA73901B3FC81500160009 /* FixtureProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BDA73891B3FC81500160009 /* FixtureProtocol.m */; };
@@ -50,12 +55,17 @@
 		0B2F77E61B35314700B41259 /* FeedItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedItemCell.swift; sourceTree = "<group>"; };
 		0B2F77EB1B35496400B41259 /* NSObjectExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
 		0B2F77EF1B354B7F00B41259 /* CacheDatastore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheDatastore.swift; sourceTree = "<group>"; };
+		0B38E6301B57F93800B652E5 /* FixtureURLProtocolObjC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FixtureURLProtocolObjC.h; sourceTree = "<group>"; };
+		0B38E6311B57F99E00B652E5 /* FixtureURLProtocolObjC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FixtureURLProtocolObjC.m; sourceTree = "<group>"; };
+		0B38E6331B57FC3B00B652E5 /* SwiftFixtureProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftFixtureProtocol.swift; sourceTree = "<group>"; };
 		0B46836E1B421F8500CC446B /* FeedResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedResponse.swift; sourceTree = "<group>"; };
 		0B4683701B42DFAD00CC446B /* FixtureURLProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FixtureURLProtocol.swift; sourceTree = "<group>"; };
 		0B4683721B43828100CC446B /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		0B4683741B44314500CC446B /* Collection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
 		0B4683761B44AA8500CC446B /* CollectionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionManager.swift; sourceTree = "<group>"; };
 		0B4683781B4584A700CC446B /* ModelType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelType.swift; sourceTree = "<group>"; };
+		0B4C0BB11B5092FE003841A7 /* JsonFileDatastore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonFileDatastore.swift; sourceTree = "<group>"; };
+		0B4C0BB31B5095DF003841A7 /* VersionedDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersionedDictionary.swift; sourceTree = "<group>"; };
 		0BB173B91B4CBBE900DE29D7 /* feed2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = feed2.json; sourceTree = "<group>"; };
 		0BCBD7001B32FFB00078C44E /* Prototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Prototype.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BCBD7041B32FFB00078C44E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -65,6 +75,7 @@
 		0BCBD71C1B32FFB00078C44E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0BCBD71D1B32FFB00078C44E /* PrototypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrototypeTests.swift; sourceTree = "<group>"; };
 		0BD01B651B339F6400FBF158 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		0BD3418D1B4EBF7F006569A0 /* FeedLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedLoader.swift; sourceTree = "<group>"; };
 		0BDA737F1B3FC23100160009 /* Datastore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Datastore.swift; sourceTree = "<group>"; };
 		0BDA73831B3FC3ED00160009 /* MemoryDatastore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryDatastore.swift; sourceTree = "<group>"; };
 		0BDA73881B3FC81500160009 /* FixtureProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FixtureProtocol.h; sourceTree = "<group>"; };
@@ -123,6 +134,7 @@
 				0BDA73931B3FCBFF00160009 /* feed1.json */,
 				0B46836E1B421F8500CC446B /* FeedResponse.swift */,
 				0BB173B91B4CBBE900DE29D7 /* feed2.json */,
+				0BD3418D1B4EBF7F006569A0 /* FeedLoader.swift */,
 			);
 			name = Feed;
 			sourceTree = "<group>";
@@ -194,6 +206,9 @@
 				0B4683741B44314500CC446B /* Collection.swift */,
 				0B4683761B44AA8500CC446B /* CollectionManager.swift */,
 				0B4683781B4584A700CC446B /* ModelType.swift */,
+				0B38E6301B57F93800B652E5 /* FixtureURLProtocolObjC.h */,
+				0B38E6311B57F99E00B652E5 /* FixtureURLProtocolObjC.m */,
+				0B38E6331B57FC3B00B652E5 /* SwiftFixtureProtocol.swift */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -204,6 +219,8 @@
 				0B2F77EF1B354B7F00B41259 /* CacheDatastore.swift */,
 				0BDA737F1B3FC23100160009 /* Datastore.swift */,
 				0BDA73831B3FC3ED00160009 /* MemoryDatastore.swift */,
+				0B4C0BB11B5092FE003841A7 /* JsonFileDatastore.swift */,
+				0B4C0BB31B5095DF003841A7 /* VersionedDictionary.swift */,
 			);
 			name = Datastore;
 			sourceTree = "<group>";
@@ -328,20 +345,25 @@
 				0BDA73911B3FC81500160009 /* FixtureProtocolEntry.m in Sources */,
 				0BDA73921B3FC81500160009 /* FixtureScope.m in Sources */,
 				0B4683751B44314500CC446B /* Collection.swift in Sources */,
+				0B4C0BB21B5092FE003841A7 /* JsonFileDatastore.swift in Sources */,
 				0BDA73901B3FC81500160009 /* FixtureProtocol.m in Sources */,
 				0B2F77EC1B35496400B41259 /* NSObjectExtension.swift in Sources */,
 				0B2F77E71B35314700B41259 /* FeedItemCell.swift in Sources */,
 				0B230E331B34F532004D01E2 /* RedViewController.swift in Sources */,
 				0B4683731B43828100CC446B /* NetworkClient.swift in Sources */,
 				0BD01B661B339F6400FBF158 /* MainViewController.swift in Sources */,
+				0B4C0BB41B5095DF003841A7 /* VersionedDictionary.swift in Sources */,
 				0B46836F1B421F8500CC446B /* FeedResponse.swift in Sources */,
 				0B2F77F01B354B7F00B41259 /* CacheDatastore.swift in Sources */,
+				0B38E6321B57F99E00B652E5 /* FixtureURLProtocolObjC.m in Sources */,
 				0BDA73801B3FC23100160009 /* Datastore.swift in Sources */,
 				0B2F77DB1B35171600B41259 /* FeedViewController.swift in Sources */,
 				0B4683791B4584A700CC446B /* ModelType.swift in Sources */,
 				0BDA73841B3FC3ED00160009 /* MemoryDatastore.swift in Sources */,
+				0B38E6341B57FC3B00B652E5 /* SwiftFixtureProtocol.swift in Sources */,
 				0B4683711B42DFAD00CC446B /* FixtureURLProtocol.swift in Sources */,
 				0B4683771B44AA8500CC446B /* CollectionManager.swift in Sources */,
+				0BD3418E1B4EBF7F006569A0 /* FeedLoader.swift in Sources */,
 				0BCBD7061B32FFB00078C44E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

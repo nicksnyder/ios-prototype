@@ -5,17 +5,17 @@
 
 import Foundation
 
+/*
 class MemoryDatastore: Datastore {
   
   private var data = [String: AnyObject]()
   
-  /*
   func putData(data: [String : DatastoreValue?], completion: ((success: Bool) -> Void)?) {
     for (key, value) in data {
       self.data[key] = value?.immutableCopy()
     }
     completion?(success: true)
-  }*/
+  }
   
   func putData(data: [DatastoreEntry], completion: ((success: Bool) -> Void)?) {
     for entry in data {
@@ -27,4 +27,8 @@ class MemoryDatastore: Datastore {
   func getValueForKey(key: String) -> AnyObject? {
     return data[key]
   }
-}
+  
+  func getValueForKey(key: String, completion: AnyObject? -> Void) {
+    completion(data[key])
+  }
+}*/

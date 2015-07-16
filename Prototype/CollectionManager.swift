@@ -26,17 +26,19 @@ class CollectionManager<CollectionElementType: ModelType, CollectionDelegateType
 */
 
 class CollectionManager {
+  let collectionId: String
   let datastore: Datastore
   
-  init(datastore: Datastore) {
+  init(collectionId: String, datastore: Datastore) {
+    self.collectionId = collectionId
     self.datastore = datastore
   }
   
-  func loadCollectionWithId(id: String, completion: Collection -> Void) {
+  func loadModelsWithCompletion(completion: [ModelType] -> Void) {
     
   }
   
-  func saveCollection(collection: Collection, id: String, completion: (Void -> Void)? = nil) {
+  func saveModels(models: [ModelType]) {
     
   }
 }

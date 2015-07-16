@@ -15,7 +15,9 @@ class NetworkClient {
   
   let session: NSURLSession = {
     var conf = NSURLSessionConfiguration.defaultSessionConfiguration()
-    conf.protocolClasses = [FixtureProtocol.self]
+    //conf.protocolClasses = [FixtureProtocol.self] as? AnyObject
+    //conf.protocolClasses = [FixtureURLProtocol.self]
+    conf.protocolClasses = [SwiftFixtureProtocol.self]
     return NSURLSession(configuration: conf)
   }()
   
@@ -37,9 +39,10 @@ class NetworkClient {
         } catch {
           //error = NSError(domain: NetworkClient.errorDomain, code: 1000, userInfo: nil)
         }
-        
       }
-      completion(json: json, response: response, error: error)
+      dispatch_async(dispatch_get_main_queue(), { () -> Void in
+        completion(json: json, response: response, error: error)
+      })
     }
   }
 }

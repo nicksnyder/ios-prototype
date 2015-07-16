@@ -4,3 +4,4 @@
 
 //#import "UITableViewCellExtension.h"
 #import "Fixtures.h"
+#import "FixtureURLProtocolObjC.h"

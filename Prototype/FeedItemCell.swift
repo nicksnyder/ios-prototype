@@ -22,6 +22,18 @@ struct FeedItemCellModel: ModelType {
     }
   }
   
+  init?(feedItem: FeedItem, feedResponse: FeedResponse) {
+    if let content = feedResponse.contents[feedItem.contentId],
+      sharer = feedResponse.people[feedItem.sharerId],
+      author = feedResponse.people[content.authorId] {
+        self.content = content
+        self.sharer = sharer
+        self.author = author
+    } else {
+      return nil
+    }
+  }
+  
   func toData() -> ModelData {
     return [
       "content": content.toData(),
